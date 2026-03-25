@@ -12,6 +12,8 @@
     <main class="site-main">
       {{ content }}
     </main>
+    {% include lightbox.html %}
     {% include footer.html %}
+    <script src="{{ '/assets/js/site.js' | relative_url }}"></script>
   </body>
 </html>

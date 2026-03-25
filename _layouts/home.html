@@ -4,22 +4,29 @@ layout: default
 
 <section class="hero">
   <div class="container hero__grid">
-    <div>
+    <div class="hero-copy">
       <p class="eyebrow">Senior BI and Analytics Portfolio</p>
-      <h1>Building trusted analytics systems from reporting through semantic modeling to analytics engineering.</h1>
+      <h1>Building trusted analytics systems across BI, semantic modeling, and analytics engineering.</h1>
       <p class="lead">Senior BI and analytics professional with 12+ years across Power BI, SQL, Azure, automation, and semantic modeling, now focused on Analytics Engineer roles and dbt-style delivery.</p>
       <div class="hero__actions">
         <a class="button" href="{{ '/case-studies/' | relative_url }}">View Case Studies</a>
         <a class="button button--secondary" href="{{ '/projects/' | relative_url }}">Explore Projects</a>
       </div>
     </div>
-    <aside class="hero-panel">
-      <p class="eyebrow">Current Focus</p>
-      <ul class="simple-list">
-        <li>Analytics engineering mindset with strong BI delivery background</li>
-        <li>Semantic modeling, SQL transformation, and governed reporting</li>
-        <li>Clear business framing for employer-facing portfolio work</li>
-      </ul>
+    <aside class="hero-side">
+      {% if site.data.settings.profile_photo %}
+        <figure class="profile-card">
+          <img class="profile-card__image" src="{{ site.data.settings.profile_photo | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
+        </figure>
+      {% endif %}
+      <section class="hero-panel">
+        <p class="eyebrow">Current Focus</p>
+        <ul class="simple-list">
+          <li>Analytics engineering mindset with strong BI delivery background</li>
+          <li>Semantic modeling, SQL transformation, and governed reporting</li>
+          <li>Clear business framing for employer-facing portfolio work</li>
+        </ul>
+      </section>
     </aside>
   </div>
 </section>
@@ -35,7 +42,15 @@ layout: default
       {% for case_study in featured_case_studies limit:3 %}
         <article class="card">
           {% if case_study.image %}
-            <img class="card__image" src="{{ case_study.image | relative_url }}" alt="{{ case_study.title }}">
+            <button
+              class="image-button"
+              type="button"
+              data-lightbox-src="{{ case_study.image | relative_url }}"
+              data-lightbox-alt="{{ case_study.title }}"
+              data-lightbox-caption="{{ case_study.title }}"
+            >
+              <img class="card__image" src="{{ case_study.image | relative_url }}" alt="{{ case_study.title }}">
+            </button>
           {% endif %}
           <div class="card__body">
             <p class="eyebrow">{{ case_study.eyebrow }}</p>
@@ -91,6 +106,11 @@ layout: default
       <p class="eyebrow">About</p>
       <h2>Experienced in the full path from business reporting to data model design.</h2>
       <p>This portfolio is designed as a concise professional hub. It highlights selected work where business value, architecture, transformation logic, and model quality are more important than visual volume.</p>
+      {% if site.data.settings.profile_photo %}
+        <figure class="inline-profile">
+          <img src="{{ site.data.settings.profile_photo | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
+        </figure>
+      {% endif %}
       <p><a href="{{ '/about/' | relative_url }}">Read more about my background</a></p>
     </div>
   </div>

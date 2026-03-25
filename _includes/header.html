@@ -1,6 +1,11 @@
 <header class="site-header">
   <div class="container site-header__inner">
-    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+    <a class="site-title" href="{{ '/' | relative_url }}">
+      {% if site.data.settings.profile_avatar %}
+        <img class="site-title__avatar" src="{{ site.data.settings.profile_avatar | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
+      {% endif %}
+      <span>{{ site.title }}</span>
+    </a>
     <nav class="site-nav" aria-label="Main navigation">
       {% for item in site.data.navigation %}
         <a href="{{ item.url | relative_url }}" {% if page.url == item.url %}aria-current="page"{% endif %}>{{ item.title }}</a>

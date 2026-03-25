@@ -1,0 +1,24 @@
+{
+  "name": "lukejarych.githob.io",
+  "version": "1.0.0",
+  "description": "Jekyll-based GitHub Pages portfolio site for Lukasz Jarych.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukaszjarych/lukaszjarych.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/lukaszjarych/lukaszjarych.github.io/issues"
+  },
+  "homepage": "https://github.com/lukaszjarych/lukaszjarych.github.io#readme",
+  "devDependencies": {
+    "playwright": "^1.58.2"
+  }
+}

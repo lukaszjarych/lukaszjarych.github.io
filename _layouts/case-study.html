@@ -27,7 +27,15 @@ layout: default
           <p class="eyebrow">Selected Visuals</p>
           {% for image in page.gallery %}
             <figure class="figure">
-              <img src="{{ image.path | relative_url }}" alt="{{ image.alt }}">
+              <button
+                class="image-button"
+                type="button"
+                data-lightbox-src="{{ image.path | relative_url }}"
+                data-lightbox-alt="{{ image.alt }}"
+                data-lightbox-caption="{{ image.caption }}"
+              >
+                <img src="{{ image.path | relative_url }}" alt="{{ image.alt }}">
+              </button>
               <figcaption>{{ image.caption }}</figcaption>
             </figure>
           {% endfor %}

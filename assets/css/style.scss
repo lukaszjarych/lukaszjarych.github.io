@@ -214,6 +214,13 @@ img {
   max-width: 720px;
 }
 
+.about-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0 2rem;
+}
+
 .eyebrow {
   margin: 0 0 0.75rem;
   font-size: 0.78rem;

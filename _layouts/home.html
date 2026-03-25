@@ -14,18 +14,24 @@ layout: default
       </div>
     </div>
     <aside class="hero-side">
-      {% if site.data.settings.profile_photo %}
+      {% if site.data.settings.home_photo %}
         <figure class="profile-card">
-          <img class="profile-card__image" src="{{ site.data.settings.profile_photo | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
+          <img class="profile-card__image" src="{{ site.data.settings.home_photo | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
+          <figcaption class="profile-card__caption">
+            <strong>Lukasz Jarych</strong>
+            <span>Senior BI professional transitioning into Analytics Engineering</span>
+          </figcaption>
         </figure>
       {% endif %}
       <section class="hero-panel">
-        <p class="eyebrow">Current Focus</p>
-        <ul class="simple-list">
-          <li>Analytics engineering mindset with strong BI delivery background</li>
-          <li>Semantic modeling, SQL transformation, and governed reporting</li>
-          <li>Clear business framing for employer-facing portfolio work</li>
-        </ul>
+        <p class="eyebrow">Professional Snapshot</p>
+        <p>12+ years across BI, reporting, semantic modeling, and analytics delivery, now intentionally focused on Analytics Engineer roles.</p>
+        <div class="tag-list">
+          <span class="tag">Power BI</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Semantic Modeling</span>
+          <span class="tag">Azure</span>
+        </div>
       </section>
     </aside>
   </div>
@@ -106,9 +112,9 @@ layout: default
       <p class="eyebrow">About</p>
       <h2>Experienced in the full path from business reporting to data model design.</h2>
       <p>This portfolio is designed as a concise professional hub. It highlights selected work where business value, architecture, transformation logic, and model quality are more important than visual volume.</p>
-      {% if site.data.settings.profile_photo %}
+      {% if site.data.settings.about_photo %}
         <figure class="inline-profile">
-          <img src="{{ site.data.settings.profile_photo | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
+          <img src="{{ site.data.settings.about_photo | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
         </figure>
       {% endif %}
       <p><a href="{{ '/about/' | relative_url }}">Read more about my background</a></p>

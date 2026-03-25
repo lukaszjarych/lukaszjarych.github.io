@@ -6,9 +6,9 @@ intro: A concise overview focused on strengths, direction, and how experience tr
 
 I am a BI and analytics professional with 12+ years of experience across reporting, semantic modeling, SQL, Power BI, Azure, automation, and stakeholder-facing analytics delivery.
 
-{% if site.data.settings.profile_photo %}
+{% if site.data.settings.about_photo %}
 <figure class="about-photo">
-  <img src="{{ site.data.settings.profile_photo | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
+  <img src="{{ site.data.settings.about_photo | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
 </figure>
 {% endif %}
 

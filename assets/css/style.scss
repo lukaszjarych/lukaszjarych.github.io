@@ -174,10 +174,27 @@ img {
 
 .profile-card__image {
   width: 100%;
-  min-height: 300px;
-  aspect-ratio: 4 / 3.8;
+  min-height: 280px;
+  aspect-ratio: 4 / 3.1;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
+  transform: scale(1.16);
+  transform-origin: center center;
+}
+
+.profile-card__caption {
+  display: grid;
+  gap: 0.15rem;
+  padding: 0.95rem 1.1rem 1.1rem;
+}
+
+.profile-card__caption strong {
+  font-size: 1.12rem;
+}
+
+.profile-card__caption span {
+  color: var(--muted);
+  font-size: 0.93rem;
 }
 
 .inline-profile {
@@ -189,14 +206,14 @@ img {
 .about-photo img {
   width: 100%;
   min-height: 280px;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
 }
 
 .about-photo {
   margin: 1.5rem 0 2rem;
-  max-width: 340px;
+  max-width: 720px;
 }
 
 .eyebrow {
@@ -221,6 +238,10 @@ img {
 .panel,
 .contact-card {
   padding: 1.5rem;
+}
+
+.hero-panel p {
+  margin-top: 0;
 }
 
 .hero__actions {
@@ -263,9 +284,10 @@ img {
 }
 
 .card__image {
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: #f7f4ee;
   border-radius: 0;
 }
 

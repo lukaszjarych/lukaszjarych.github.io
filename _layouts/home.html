@@ -1,0 +1,111 @@
+---
+layout: default
+---
+
+<section class="hero">
+  <div class="container hero__grid">
+    <div>
+      <p class="eyebrow">Senior BI and Analytics Portfolio</p>
+      <h1>Building trusted analytics systems from reporting through semantic modeling to analytics engineering.</h1>
+      <p class="lead">Senior BI and analytics professional with 12+ years across Power BI, SQL, Azure, automation, and semantic modeling, now focused on Analytics Engineer roles and dbt-style delivery.</p>
+      <div class="hero__actions">
+        <a class="button" href="{{ '/case-studies/' | relative_url }}">View Case Studies</a>
+        <a class="button button--secondary" href="{{ '/projects/' | relative_url }}">Explore Projects</a>
+      </div>
+    </div>
+    <aside class="hero-panel">
+      <p class="eyebrow">Current Focus</p>
+      <ul class="simple-list">
+        <li>Analytics engineering mindset with strong BI delivery background</li>
+        <li>Semantic modeling, SQL transformation, and governed reporting</li>
+        <li>Clear business framing for employer-facing portfolio work</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Featured Work</p>
+      <h2>Case studies built around architecture, modeling, and outcomes.</h2>
+    </div>
+    <div class="cards">
+      {% assign featured_case_studies = site.case_studies | where: "featured", true | sort: "order" %}
+      {% for case_study in featured_case_studies limit:3 %}
+        <article class="card">
+          {% if case_study.image %}
+            <img class="card__image" src="{{ case_study.image | relative_url }}" alt="{{ case_study.title }}">
+          {% endif %}
+          <div class="card__body">
+            <p class="eyebrow">{{ case_study.eyebrow }}</p>
+            <h3><a href="{{ case_study.url | relative_url }}">{{ case_study.title }}</a></h3>
+            <p>{{ case_study.excerpt }}</p>
+            <div class="tag-list">
+              {% for tool in case_study.tools limit:3 %}
+                <span class="tag">{{ tool }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="page-section page-section--accent">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">Technical Project</p>
+      <h2>Public dbt work should make the Analytics Engineering transition visible.</h2>
+      <p>The site should point employers to a dedicated dbt repository that demonstrates transformation layers, testing, documentation, and maintainable project structure. This is where public engineering proof can complement confidential portfolio work.</p>
+      <a class="button" href="https://github.com/lukaszjarych" target="_blank" rel="noreferrer">GitHub Profile</a>
+    </div>
+    <div class="panel">
+      <p class="eyebrow">What To Show</p>
+      <ul class="simple-list">
+        <li>Source, staging, intermediate, and marts layers</li>
+        <li>dbt tests, documentation, and clear model naming</li>
+        <li>Readable SQL and business-oriented model outputs</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="page-section">
+  <div class="container split">
+    <div>
+      <p class="eyebrow">Strengths</p>
+      <h2>Built around dependable analytics delivery.</h2>
+      <div class="tag-list tag-list--large">
+        <span class="tag">Power BI</span>
+        <span class="tag">Microsoft Fabric</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Azure</span>
+        <span class="tag">Semantic Modeling</span>
+        <span class="tag">Automation</span>
+        <span class="tag">Reporting Governance</span>
+      </div>
+    </div>
+    <div>
+      <p class="eyebrow">About</p>
+      <h2>Experienced in the full path from business reporting to data model design.</h2>
+      <p>This portfolio is designed as a concise professional hub. It highlights selected work where business value, architecture, transformation logic, and model quality are more important than visual volume.</p>
+      <p><a href="{{ '/about/' | relative_url }}">Read more about my background</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="page-section page-section--tight">
+  <div class="container contact-strip">
+    <div>
+      <p class="eyebrow">Contact</p>
+      <h2>Available for Analytics Engineer and senior analytics conversations.</h2>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:lukasz.jarych@gmail.com">Email</a>
+      <a href="https://github.com/lukaszjarych" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="{{ '/contact/' | relative_url }}">More Contact Options</a>
+    </div>
+  </div>
+</section>

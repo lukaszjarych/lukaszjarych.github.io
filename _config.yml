@@ -1,0 +1,35 @@
+title: Lukasz Jarych
+email: "lukasz.jarych@gmail.com"
+description: "Portfolio for a senior BI and analytics professional transitioning into Analytics Engineering."
+url: "https://lukaszjarych.github.io"
+baseurl: ""
+
+markdown: kramdown
+permalink: pretty
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  case_studies:
+    output: true
+    permalink: /case-studies/:name/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: case_studies
+    values:
+      layout: case-study
+
+sass:
+  style: compressed
+
+exclude:
+  - Gemfile.lock
+  - README.md

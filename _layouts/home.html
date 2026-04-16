@@ -12,6 +12,15 @@ layout: default
         <a class="button" href="{{ '/case-studies/' | relative_url }}">View Case Studies</a>
         <a class="button button--secondary" href="{{ '/projects/' | relative_url }}">Explore Projects</a>
       </div>
+      <div class="hero__highlights">
+        {% assign hero_case_studies = site.case_studies | sort: "order" %}
+        {% for case_study in hero_case_studies limit:4 %}
+          <a class="hero-highlight" href="{{ case_study.url | relative_url }}">
+            <span class="hero-highlight__label">{{ case_study.eyebrow }}</span>
+            <strong>{{ case_study.title }}</strong>
+          </a>
+        {% endfor %}
+      </div>
     </div>
     <aside class="hero-side">
       {% if site.data.settings.home_photo %}
@@ -24,14 +33,18 @@ layout: default
         </figure>
       {% endif %}
       <section class="hero-panel">
-        <p class="eyebrow">Professional Snapshot</p>
-        <p>Strongest where SQL, semantic modeling, reporting reliability, and business translation meet. Experienced in building analytics that support both day-to-day reporting and better strategic decisions.</p>
+        <p class="eyebrow">Delivery Focus</p>
+        <ul class="simple-list simple-list--tight">
+          <li>Semantic models designed for reuse, governance, and reliable KPI logic</li>
+          <li>Architecture and transformation choices explained clearly to stakeholders</li>
+          <li>Reporting shaped around decision-making, not only dashboard visuals</li>
+        </ul>
       </section>
     </aside>
   </div>
 </section>
 
-<section class="page-section">
+<section class="page-section page-section--featured">
   <div class="container">
     <div class="section-heading">
       <p class="eyebrow">Featured Work</p>

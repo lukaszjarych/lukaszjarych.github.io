@@ -2,6 +2,7 @@
 title: Contact
 description: Contact details and professional links.
 intro: The fastest ways to reach me or review my public work.
+hero_style: compact
 ---
 
 <section class="contact-grid">
@@ -15,6 +16,6 @@ intro: The fastest ways to reach me or review my public work.
   </div>
   <div class="contact-card">
     <h2>LinkedIn</h2>
-    <p>Add your public LinkedIn profile URL here.</p>
+    <p><a href="https://www.linkedin.com/in/lukasz-jarych/" target="_blank" rel="noreferrer">linkedin.com/in/lukasz-jarych</a></p>
   </div>
 </section>

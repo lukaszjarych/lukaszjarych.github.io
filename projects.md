@@ -2,10 +2,12 @@
 title: Projects
 description: Public technical work and repository links.
 intro: Public projects that demonstrate transformation logic, modeling discipline, and analytics engineering workflow.
+hero_style: compact
 ---
 
 <section class="cards cards--stacked">
-  <article class="card">
+  <article class="card card--with-media">
+    <img class="card__image card__image--stacked" src="{{ '/assets/images/case-studies/azure-cost-analytics/04-star schema.png' | relative_url }}" alt="Star schema diagram from Azure cost analytics architecture">
     <div class="card__body">
       <p class="eyebrow">Featured Technical Project</p>
       <h2>dbt Portfolio Project</h2>

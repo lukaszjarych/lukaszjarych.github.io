@@ -2,6 +2,7 @@
 title: About
 description: About Lukasz Jarych.
 intro: A concise overview of my background, strengths, and the kind of analytics roles I am targeting.
+hero_style: compact
 ---
 
 I am a BI and analytics professional with 12+ years of experience across reporting, semantic modeling, SQL, Power BI, Azure, automation, and stakeholder-facing analytics delivery.

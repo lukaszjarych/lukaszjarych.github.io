@@ -4,10 +4,12 @@ eyebrow: Case Study
 excerpt: Metadata-driven analytics pipeline designed to standardize infrastructure inputs, produce migration-ready datasets, and generate repeatable Excel deliverables.
 summary: A portfolio case study focused on the end-to-end pipeline I designed and implemented across metadata modeling, transformation logic, curated intermediate datasets, and Excel report generation for cloud migration planning.
 tools:
-  - Excel
   - Power Query
   - SQL
   - Java
+  - dbt
+  - Data Agents
+  - Excel
   - Metadata Modeling
   - Data Standardization
 featured: true

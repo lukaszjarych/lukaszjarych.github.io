@@ -1,7 +1,7 @@
 ---
 title: QlikView Sales Classification Pipeline
 eyebrow: Case Study
-excerpt: Legacy QlikView pipeline where chained applications, QVD storage, and rule-based classification created a governed reporting backbone without relying on modern warehouse tooling.
+excerpt: Legacy QlikView pipeline where chained applications, QVD storage, and rule-based classification created a governed reporting workflow for sales classification and decision support.
 summary: A portfolio case study showing how a legacy QlikView stack was used not only for reporting, but also for staged data processing, historical tracking, exception management, and governed sales classification logic across SAP BW and CRM inputs.
 tools:
   - QlikView

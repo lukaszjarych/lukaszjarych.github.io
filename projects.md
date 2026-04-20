@@ -11,13 +11,16 @@ hero_style: compact
     <div class="card__body">
       <p class="eyebrow">Project</p>
       <h2>dbt Portfolio Project</h2>
-      <p>A public dbt project should be the main technical proof point for the Analytics Engineer transition. It should demonstrate source-to-model thinking, tests, documentation, and clear analytical outputs.</p>
+      <p>GitHub proof focused on Azure cost analytics delivery: dbt modeling, Microsoft Fabric workflow design, semantic logic, and decision-ready reporting for cost optimization.</p>
       <ul class="simple-list">
-        <li>Focus on modular SQL models, documentation, and data tests</li>
-        <li>Use a small but believable business domain and clean repo structure</li>
-        <li>Link the repository directly once it is published</li>
+        <li>Shows the path from raw cost inputs into curated models, governed metrics, and trusted reporting</li>
+        <li>Highlights architecture thinking, performance tradeoffs, and maintainable analytics delivery</li>
+        <li>Supported by the related case study that explains business context and outcomes</li>
       </ul>
-      <p><a class="button" href="https://github.com/lukaszjarych" target="_blank" rel="noreferrer">View GitHub Profile</a></p>
+      <div class="about-actions">
+        <a class="button" href="https://github.com/lukaszjarych/cost-mgmt-analitycs" target="_blank" rel="noreferrer">dbt GitHub Repository</a>
+        <a class="button button--secondary" href="{{ '/case-studies/azure-cost-analytics/' | relative_url }}">Case Study</a>
+      </div>
     </div>
   </article>
   <article class="card card--with-media project-card">
@@ -25,13 +28,16 @@ hero_style: compact
     <div class="card__body">
       <p class="eyebrow">Project</p>
       <h2>Lightdash dbt Delivery</h2>
-      <p>A public-style analytics delivery example built around dbt marts, semantic BI structure, and a recruiter-friendly Lightdash dashboard on top of curated Azure cost data.</p>
+      <p>GitHub proof showing how dbt marts, semantic structure, and Lightdash turn curated analytics models into usable business reporting.</p>
       <ul class="simple-list">
-        <li>Show the path from modeled marts into reusable BI metrics</li>
-        <li>Document business logic, dashboard scope, and delivery tradeoffs</li>
-        <li>Use it as a bridge between analytics engineering and BI implementation</li>
+        <li>Shows the path from dbt marts into reusable BI metrics and dashboard delivery</li>
+        <li>Keeps repo structure readable, scoped, and recruiter-friendly</li>
+        <li>Supported by the related case study that explains delivery choices and business logic</li>
       </ul>
-      <p><a class="button button--secondary" href="{{ '/case-studies/ai-powered-bi-delivery-with-lightdash/' | relative_url }}">Open Related Case Study</a></p>
+      <div class="about-actions">
+        <a class="button" href="https://github.com/lukaszjarych/cost-mgmt-lightdash" target="_blank" rel="noreferrer">Lightdash GitHub Repository</a>
+        <a class="button button--secondary" href="{{ '/case-studies/ai-powered-bi-delivery-with-lightdash/' | relative_url }}">Case Study</a>
+      </div>
     </div>
   </article>
 </section>

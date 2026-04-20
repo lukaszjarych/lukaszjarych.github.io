@@ -8,6 +8,11 @@ layout: default
       <p class="eyebrow">{{ page.eyebrow }}</p>
       <h1>{{ page.title }}</h1>
       <p class="lead">{{ page.summary }}</p>
+      {% if page.project_repo_url %}
+        <div class="about-actions">
+          <a class="button" href="{{ page.project_repo_url }}" target="_blank" rel="noreferrer">{{ page.project_repo_label | default: "Open GitHub Repository" }}</a>
+        </div>
+      {% endif %}
       <div class="tag-list">
         {% for tool in page.tools %}
           <span class="tag">{{ tool }}</span>

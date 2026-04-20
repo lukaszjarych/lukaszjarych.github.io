@@ -1,11 +1,10 @@
 ---
 title: About
 description: About Lukasz Jarych.
-intro: A concise overview of my background, strengths, and the kind of analytics roles I am targeting.
 hero_style: compact
 ---
 
-I am a BI and analytics professional with 12+ years of experience across reporting, semantic modeling, SQL, Power BI, Azure, automation, and stakeholder-facing analytics delivery.
+I am an Analytics Engineer and data / BI professional with 12+ years of experience across reporting, semantic modeling, SQL, Power BI, Microsoft Fabric, automation, and stakeholder-facing analytics delivery.
 
 {% if site.data.settings.about_photo %}
 <figure class="about-photo">
@@ -20,10 +19,10 @@ I am a BI and analytics professional with 12+ years of experience across reporti
 </div>
 {% endif %}
 
-I am currently targeting two closely related directions: Senior Analytics Engineer and Senior Data Analyst roles. The overlap that fits me best is work centered on trusted reporting, clean data models, stakeholder alignment, and turning complex data into useful business decisions.
+I work across the full path from fragmented source data to trusted reporting. That includes shaping data structures, defining reusable business logic, improving model quality, and making analytics easier for stakeholders to understand and use.
 
-My portfolio direction intentionally highlights more than dashboard delivery alone. I want employers to see the thinking behind reliable analytics systems: transformation logic, semantic modeling, governance, maintainability, and decision support.
+This portfolio intentionally highlights more than dashboard delivery alone. I want employers to see the thinking behind reliable analytics systems: transformation logic, semantic modeling, governance, maintainability, and decision support.
 
-I bring a mix of hands-on delivery and analytical structure. That includes building reporting layers, improving model quality, shaping clear KPI definitions, and helping stakeholders move from vague questions to practical, decision-ready outputs.
+I bring a mix of hands-on delivery and analytical structure. That includes building reporting layers, shaping clear KPI definitions, and helping teams move from vague questions to practical, decision-ready outputs.
 
 Much of my professional work is confidential, so this portfolio uses carefully written summaries, selected sanitized visuals, and technical framing that stays accurate without disclosing sensitive implementation details.

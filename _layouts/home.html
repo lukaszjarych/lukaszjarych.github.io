@@ -20,7 +20,7 @@ layout: default
             <img class="profile-card__image" src="{{ site.data.settings.home_photo | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
             <figcaption class="profile-card__caption">
               <strong>Lukasz Jarych</strong>
-              <span>Analytics Engineer and Data / BI professional</span>
+              <span>Analytics Engineer and Data / BI professional with 12+ years of experience</span>
             </figcaption>
           </figure>
         {% endif %}
@@ -35,9 +35,9 @@ layout: default
           <div>
             <p class="eyebrow">Key Achievements</p>
             <ul class="simple-list simple-list--tight">
-              <li><strong>QlikView delivery:</strong> learned the platform in 6 months and helped build reporting used by 800+ end users.</li>
               <li><strong>Cloud cost impact:</strong> surfaced opportunities to save more than $100K through Azure cost analysis and reporting.</li>
-              <li><strong>Enterprise automation:</strong> delivered reporting and process improvements for teams and customers relying on repeatable data workflows.</li>
+              <li><strong>Qlik delivery:</strong> learned the platform in 6 months and helped build reporting used by 800+ end users.</li>
+              <li><strong>Workflow efficiency:</strong> automated recurring data pipelines and reporting steps that saved an estimated 40 hours per month and reduced deployment time from weeks to minutes.</li>
             </ul>
           </div>
           <div>
@@ -85,8 +85,8 @@ layout: default
             <p class="eyebrow">{{ case_study.eyebrow }}</p>
             <h3><a href="{{ case_study.url | relative_url }}">{{ case_study.title }}</a></h3>
             <p>{{ case_study.excerpt }}</p>
-            <div class="tag-list">
-              {% for tool in case_study.tools limit:4 %}
+        <div class="tag-list">
+              {% for tool in case_study.tools limit:5 %}
                 <span class="tag">{{ tool }}</span>
               {% endfor %}
             </div>
@@ -110,13 +110,16 @@ layout: default
         <div class="card__body">
           <p class="eyebrow">GitHub Project</p>
           <h2>Azure Cost Management Analysis</h2>
-          <p>Public technical proof focused on governed cloud cost analytics, Microsoft Fabric workflows, semantic modeling, and decision-ready reporting structure.</p>
+          <p>GitHub proof focused on Azure cost analytics delivery: dbt modeling, Microsoft Fabric workflow design, semantic logic, and decision-ready reporting for cost optimization.</p>
           <ul class="simple-list">
-            <li>Show the path from ingestion and modeling into trusted cost reporting</li>
-            <li>Highlight architecture thinking, metrics logic, and maintainable BI delivery</li>
-            <li>Use the related case study to explain business context and outcomes</li>
+            <li>Shows the path from raw cost inputs into curated models, governed metrics, and trusted reporting</li>
+            <li>Highlights architecture thinking, performance tradeoffs, and maintainable analytics delivery</li>
+            <li>Supported by the related case study that explains business context and outcomes</li>
           </ul>
-          <p><a class="button" href="https://github.com/lukaszjarych" target="_blank" rel="noreferrer">View GitHub Profile</a></p>
+          <div class="about-actions">
+            <a class="button" href="https://github.com/lukaszjarych/cost-mgmt-analitycs" target="_blank" rel="noreferrer">dbt GitHub Repository</a>
+            <a class="button button--secondary" href="{{ '/case-studies/azure-cost-analytics/' | relative_url }}">Case Study</a>
+          </div>
         </div>
       </article>
       <article class="card card--with-media project-card">
@@ -124,13 +127,16 @@ layout: default
         <div class="card__body">
           <p class="eyebrow">GitHub Project</p>
           <h2>Lightdash Delivery on dbt Marts</h2>
-          <p>Second public proof point showing how dbt marts, semantic structure, and Lightdash can turn curated models into usable business reporting.</p>
+          <p>GitHub proof showing how dbt marts, semantic structure, and Lightdash turn curated analytics models into usable business reporting.</p>
           <ul class="simple-list">
-            <li>Show the path from dbt marts into reusable BI metrics and dashboard delivery</li>
-            <li>Keep repo structure readable and recruiter-friendly</li>
-            <li>Use the related case study to explain delivery choices and business logic</li>
+            <li>Shows the path from dbt marts into reusable BI metrics and dashboard delivery</li>
+            <li>Keeps repo structure readable, scoped, and recruiter-friendly</li>
+            <li>Supported by the related case study that explains delivery choices and business logic</li>
           </ul>
-          <p><a class="button button--secondary" href="{{ '/case-studies/ai-powered-bi-delivery-with-lightdash/' | relative_url }}">Open Related Case Study</a></p>
+          <div class="about-actions">
+            <a class="button" href="https://github.com/lukaszjarych/cost-mgmt-lightdash" target="_blank" rel="noreferrer">Lightdash GitHub Repository</a>
+            <a class="button button--secondary" href="{{ '/case-studies/ai-powered-bi-delivery-with-lightdash/' | relative_url }}">Case Study</a>
+          </div>
         </div>
       </article>
     </div>
@@ -185,7 +191,7 @@ layout: default
       <p class="eyebrow">Contact</p>
     </div>
     <div class="contact-links">
-      <a href="mailto:lukasz.jarych@gmail.com">Email</a>
+      <a href="mailto:luka.jarych@gmail.com">Email</a>
       <a href="https://github.com/lukaszjarych" target="_blank" rel="noreferrer">GitHub</a>
       <a href="https://www.linkedin.com/in/lukasz-jarych/" target="_blank" rel="noreferrer">LinkedIn</a>
     </div>

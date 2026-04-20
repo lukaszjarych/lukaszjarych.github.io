@@ -6,6 +6,7 @@ summary: A portfolio case study showing how AI-assisted implementation, analytic
 tools:
   - Lightdash
   - dbt
+  - Data Agents
   - DuckDB
   - MotherDuck
   - AI-Assisted Development

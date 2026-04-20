@@ -8,7 +8,7 @@ hero_style: compact
 <section class="contact-grid">
   <div class="contact-card">
     <h2>Email</h2>
-    <p><a href="mailto:lukasz.jarych@gmail.com">lukasz.jarych@gmail.com</a></p>
+    <p><a href="mailto:luka.jarych@gmail.com">luka.jarych@gmail.com</a></p>
   </div>
   <div class="contact-card">
     <h2>GitHub</h2>

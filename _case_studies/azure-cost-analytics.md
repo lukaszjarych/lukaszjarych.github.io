@@ -6,12 +6,15 @@ summary: A cloud cost analytics solution designed as a trusted analytics system,
 tools:
   - Power BI
   - Microsoft Fabric
+  - dbt
   - Dagster
   - SQL
   - Tabular Editor
 featured: true
 order: 1
 image: /assets/images/case-studies/azure-cost-analytics/01-report-tags-analysis.png
+project_repo_url: https://github.com/lukaszjarych/cost-mgmt-analitycs
+project_repo_label: Open dbt GitHub Repository
 gallery:
   - path: /assets/images/case-studies/azure-cost-analytics/01-report-tags-analysis.png
     alt: Tags analysis report view

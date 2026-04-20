@@ -19,9 +19,11 @@ I am an Analytics Engineer and data / BI professional with 12+ years of experien
 </div>
 {% endif %}
 
-My work spans the full path from fragmented source data to usable reporting. That includes structuring data, modeling business logic, improving quality and maintainability, and turning technical complexity into outputs that business users can actually trust and act on.
+My work spans the full path from fragmented source data to trusted reporting. That includes structuring data, modeling business logic, improving quality and maintainability, and turning technical complexity into outputs that stakeholders can actually trust and use.
 
-One of my strongest advantages is how quickly I learn new tools, domains, and business contexts. Over the years I have worked in startups, mid-sized companies, and larger corporate environments, which taught me how to adapt my approach without losing delivery quality. I am comfortable communicating across teams and countries, working with both technical and business stakeholders, and turning unclear requirements into something structured and useful.
+One of my strongest advantages is how quickly I learn. I adapt fast to new tools, domains, and business contexts, and I enjoy stepping into unfamiliar areas and making them understandable. Over the years I have worked in startups, mid-sized companies, and larger corporate environments, which taught me how to adjust my way of working without losing clarity or delivery quality.
+
+I am also comfortable communicating across teams, countries, and levels of seniority. I have worked with technical specialists, business users, managers, and decision-makers, and I know how to turn vague questions into something structured, measurable, and useful.
 
 I am strongest where analytics engineering and BI delivery meet: SQL transformation, semantic modeling, Power BI and Microsoft Fabric, dbt-style thinking, automation, and stakeholder-facing delivery. I enjoy building systems that are not only technically correct, but also clear, reusable, and stable enough to support recurring decision-making.
 

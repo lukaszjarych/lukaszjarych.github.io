@@ -6,6 +6,7 @@ summary: A cloud cost analytics solution designed as a trusted analytics system,
 tools:
   - Power BI
   - Microsoft Fabric
+  - Dagster
   - SQL
   - Tabular Editor
 featured: true

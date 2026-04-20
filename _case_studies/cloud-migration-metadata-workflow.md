@@ -12,6 +12,7 @@ tools:
   - Data Standardization
 featured: true
 order: 3
+image: /assets/images/case-studies/cloud-migration-metadata-workflow/01-metadata-pipeline.svg
 ---
 
 ## Overview

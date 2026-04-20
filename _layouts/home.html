@@ -6,9 +6,9 @@ layout: default
   <section class="hero">
     <div class="container hero__grid">
       <div class="hero-copy">
-        <p class="eyebrow">Senior BI, Analytics, and Data Modeling Portfolio</p>
-        <h1>Building trusted reporting, semantic models, and decision-ready analytics.</h1>
-        <p class="lead">Senior BI and analytics professional with 12+ years across Power BI, SQL, Azure, automation, semantic modeling, and stakeholder-facing delivery.</p>
+        <p class="eyebrow">Analytics Engineering, BI, and Data Foundations</p>
+        <h1>I build end-to-end data integration and reporting systems.</h1>
+        <p class="lead">From fragmented Excel files and operational tools to governed models and trusted dashboards, I design the full path from raw data to decision-ready reporting.</p>
         <div class="hero__actions">
           <a class="button" href="{{ '/case-studies/' | relative_url }}">View Case Studies</a>
           <a class="button button--secondary" href="{{ '/projects/' | relative_url }}">Explore Projects</a>
@@ -20,7 +20,7 @@ layout: default
             <img class="profile-card__image" src="{{ site.data.settings.home_photo | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
             <figcaption class="profile-card__caption">
               <strong>Lukasz Jarych</strong>
-              <span>Senior BI and analytics professional</span>
+              <span>Analytics Engineer and Data / BI professional</span>
             </figcaption>
           </figure>
         {% endif %}
@@ -35,21 +35,21 @@ layout: default
           <div>
             <p class="eyebrow">Key Achievements</p>
             <ul class="simple-list simple-list--tight">
-              <li><strong>Trusted reporting:</strong> built reusable reporting layers centered on clear KPIs and dependable outputs.</li>
-              <li><strong>Semantic modeling:</strong> structured models for governance, maintainability, and shared business logic.</li>
-              <li><strong>Decision support:</strong> translated stakeholder needs into analytics that support real business decisions.</li>
+              <li><strong>QlikView delivery:</strong> learned the platform in 6 months and helped build reporting used by 800+ end users.</li>
+              <li><strong>Cloud cost impact:</strong> surfaced opportunities to save more than $100K through Azure cost analysis and reporting.</li>
+              <li><strong>Enterprise automation:</strong> delivered reporting and process improvements for teams and customers relying on repeatable data workflows.</li>
             </ul>
           </div>
           <div>
             <p class="eyebrow">Gallup Strengths</p>
             <div class="tag-list tag-list--gallup">
-              <span class="tag">Add Top 5</span>
-              <span class="tag">Gallup</span>
-              <span class="tag">Strengths</span>
-              <span class="tag">Here</span>
-              <span class="tag">Next</span>
+              <span class="tag">Restorative</span>
+              <span class="tag">Learner</span>
+              <span class="tag">Achiever</span>
+              <span class="tag">Individualization</span>
+              <span class="tag">Futurist</span>
             </div>
-            <p class="delivery-focus-note">This space is ready for your exact Gallup strengths once you share the final names.</p>
+            <p class="delivery-focus-note">These strengths support how I work with teams: solve problems quickly, learn fast, adapt to people and context, and keep improving delivery over time.</p>
           </div>
         </div>
       </section>
@@ -65,7 +65,7 @@ layout: default
     </div>
     <div class="cards cards--home">
       {% assign featured_case_studies = site.case_studies | where: "featured", true | sort: "order" %}
-      {% assign hero_case_study_titles = "Azure Cost Analytics in Microsoft Fabric / Power BI|QlikView Sales Classification Pipeline|Cloud Migration Metadata Workflow|AI-Powered BI Delivery with Lightdash" | split: "|" %}
+      {% assign hero_case_study_titles = "Azure Cost Analytics in Microsoft Fabric / Power BI|AI-Powered BI Delivery with Lightdash|Cloud Migration Metadata Workflow|QlikView Sales Classification Pipeline" | split: "|" %}
       {% for desired_title in hero_case_study_titles %}
         {% assign case_study = featured_case_studies | where: "title", desired_title | first %}
         {% if case_study %}
@@ -86,7 +86,7 @@ layout: default
             <h3><a href="{{ case_study.url | relative_url }}">{{ case_study.title }}</a></h3>
             <p>{{ case_study.excerpt }}</p>
             <div class="tag-list">
-              {% for tool in case_study.tools limit:3 %}
+              {% for tool in case_study.tools limit:4 %}
                 <span class="tag">{{ tool }}</span>
               {% endfor %}
             </div>
@@ -99,20 +99,40 @@ layout: default
 </section>
 
 <section class="page-section page-section--compact section--cream">
-  <div class="container split">
-    <div>
-      <p class="eyebrow">Technical Project</p>
-      <h2>Public technical work should reinforce Analytics Engineering credibility.</h2>
-      <p>A dedicated dbt-style project can complement confidential portfolio work by showing transformation layers, testing, documentation, and maintainable analytical structure in a public, reviewable format.</p>
-      <a class="button" href="https://github.com/lukaszjarych" target="_blank" rel="noreferrer">GitHub Profile</a>
+  <div class="container">
+    <div class="section-heading">
+      <p class="eyebrow">Technical Projects</p>
+      <h2>GitHub projects that act as public technical proof, with case studies describing the delivery and architecture behind them.</h2>
     </div>
-    <div class="panel">
-      <p class="eyebrow">What To Show</p>
-      <ul class="simple-list">
-        <li>Source, staging, intermediate, and marts layers</li>
-        <li>dbt tests, documentation, and clear model naming</li>
-        <li>Readable SQL and business-oriented model outputs</li>
-      </ul>
+    <div class="cards cards--stacked projects-home">
+      <article class="card card--with-media project-card">
+        <img class="card__image card__image--stacked" src="{{ '/assets/images/case-studies/azure-cost-analytics/02-architecture-fabric-lineage.png' | relative_url }}" alt="Azure cost analytics architecture preview">
+        <div class="card__body">
+          <p class="eyebrow">GitHub Project</p>
+          <h2>Azure Cost Management Analysis</h2>
+          <p>Public technical proof focused on governed cloud cost analytics, Microsoft Fabric workflows, semantic modeling, and decision-ready reporting structure.</p>
+          <ul class="simple-list">
+            <li>Show the path from ingestion and modeling into trusted cost reporting</li>
+            <li>Highlight architecture thinking, metrics logic, and maintainable BI delivery</li>
+            <li>Use the related case study to explain business context and outcomes</li>
+          </ul>
+          <p><a class="button" href="https://github.com/lukaszjarych" target="_blank" rel="noreferrer">View GitHub Profile</a></p>
+        </div>
+      </article>
+      <article class="card card--with-media project-card">
+        <img class="card__image card__image--stacked" src="{{ '/assets/images/case-studies/ai-powered-bi-delivery-with-lightdash/01-lightdash-overview.png' | relative_url }}" alt="Lightdash delivery project preview">
+        <div class="card__body">
+          <p class="eyebrow">GitHub Project</p>
+          <h2>Lightdash Delivery on dbt Marts</h2>
+          <p>Second public proof point showing how dbt marts, semantic structure, and Lightdash can turn curated models into usable business reporting.</p>
+          <ul class="simple-list">
+            <li>Show the path from dbt marts into reusable BI metrics and dashboard delivery</li>
+            <li>Keep repo structure readable and recruiter-friendly</li>
+            <li>Use the related case study to explain delivery choices and business logic</li>
+          </ul>
+          <p><a class="button button--secondary" href="{{ '/case-studies/ai-powered-bi-delivery-with-lightdash/' | relative_url }}">Open Related Case Study</a></p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -125,22 +145,35 @@ layout: default
       <div class="tag-list tag-list--large">
         <span class="tag">Power BI</span>
         <span class="tag">Microsoft Fabric</span>
+        <span class="tag">dbt</span>
+        <span class="tag">Dagster</span>
+        <span class="tag">Spark</span>
+        <span class="tag">PySpark</span>
         <span class="tag">SQL</span>
+        <span class="tag">Python</span>
         <span class="tag">Azure</span>
+        <span class="tag">Java</span>
+        <span class="tag">Power Query</span>
+        <span class="tag">Excel VBA</span>
         <span class="tag">Semantic Modeling</span>
         <span class="tag">Automation</span>
+        <span class="tag">QlikView</span>
+        <span class="tag">Qlik Sense</span>
+        <span class="tag">Data Quality</span>
+        <span class="tag">Git</span>
         <span class="tag">Reporting Governance</span>
       </div>
     </div>
     <div>
       <p class="eyebrow">About</p>
-      <h2>Experienced across the full path from business questions to trusted reporting.</h2>
-      <p>This portfolio is designed as a concise professional hub for Senior Analytics Engineer and Senior Data Analyst opportunities. It highlights work where business value, model quality, reporting clarity, and maintainable analytics matter more than visual volume.</p>
+      <h2>Experienced across the full path from messy data sources to trusted reporting.</h2>
+      <p>I work at the intersection of analytics engineering and BI delivery: structuring data, defining business logic, and making reporting reliable for end users and stakeholders.</p>
       {% if site.data.settings.about_photo %}
         <figure class="inline-profile">
           <img src="{{ site.data.settings.about_photo | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
         </figure>
       {% endif %}
+      <p>Much of my work is confidential, so this portfolio focuses on selected case studies that show architecture thinking, modeling discipline, and measurable business outcomes.</p>
       <p><a href="{{ '/about/' | relative_url }}">Read more about my background</a></p>
     </div>
   </div>
@@ -150,7 +183,6 @@ layout: default
   <div class="container contact-strip">
     <div>
       <p class="eyebrow">Contact</p>
-      <h2>Available for Analytics Engineer and senior analytics conversations.</h2>
     </div>
     <div class="contact-links">
       <a href="mailto:lukasz.jarych@gmail.com">Email</a>

@@ -2,43 +2,60 @@
 layout: default
 ---
 
-<section class="hero">
-  <div class="container hero__grid">
-    <div class="hero-copy">
-      <p class="eyebrow">Senior BI, Analytics, and Data Modeling Portfolio</p>
-      <h1>Building trusted reporting, semantic models, and decision-ready analytics.</h1>
-      <p class="lead">Senior BI and analytics professional with 12+ years across Power BI, SQL, Azure, automation, semantic modeling, and stakeholder-facing delivery.</p>
-      <div class="hero__actions">
-        <a class="button" href="{{ '/case-studies/' | relative_url }}">View Case Studies</a>
-        <a class="button button--secondary" href="{{ '/projects/' | relative_url }}">Explore Projects</a>
+<div class="intro-flow">
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Senior BI, Analytics, and Data Modeling Portfolio</p>
+        <h1>Building trusted reporting, semantic models, and decision-ready analytics.</h1>
+        <p class="lead">Senior BI and analytics professional with 12+ years across Power BI, SQL, Azure, automation, semantic modeling, and stakeholder-facing delivery.</p>
+        <div class="hero__actions">
+          <a class="button" href="{{ '/case-studies/' | relative_url }}">View Case Studies</a>
+          <a class="button button--secondary" href="{{ '/projects/' | relative_url }}">Explore Projects</a>
+        </div>
       </div>
+      <aside class="hero-side">
+        {% if site.data.settings.home_photo %}
+          <figure class="profile-card">
+            <img class="profile-card__image" src="{{ site.data.settings.home_photo | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
+            <figcaption class="profile-card__caption">
+              <strong>Lukasz Jarych</strong>
+              <span>Senior BI and analytics professional</span>
+            </figcaption>
+          </figure>
+        {% endif %}
+      </aside>
     </div>
-    <aside class="hero-side">
-      {% if site.data.settings.home_photo %}
-        <figure class="profile-card">
-          <img class="profile-card__image" src="{{ site.data.settings.home_photo | relative_url }}" alt="{{ site.data.settings.profile_photo_alt }}">
-          <figcaption class="profile-card__caption">
-            <strong>Lukasz Jarych</strong>
-            <span>Senior BI and analytics professional</span>
-          </figcaption>
-        </figure>
-      {% endif %}
-    </aside>
-  </div>
-</section>
+  </section>
 
-<section class="page-section delivery-focus-section">
-  <div class="container">
-    <section class="delivery-focus-card">
-      <p class="eyebrow">Delivery Focus</p>
-      <ul class="simple-list simple-list--tight">
-        <li>Reusable semantic models with governed KPI logic</li>
-        <li>Architecture and transformation choices explained clearly</li>
-        <li>Reporting designed around business decisions</li>
-      </ul>
-    </section>
-  </div>
-</section>
+  <section class="page-section delivery-focus-section">
+    <div class="container">
+      <section class="delivery-focus-card">
+        <div class="delivery-focus-grid">
+          <div>
+            <p class="eyebrow">Key Achievements</p>
+            <ul class="simple-list simple-list--tight">
+              <li><strong>Trusted reporting:</strong> built reusable reporting layers centered on clear KPIs and dependable outputs.</li>
+              <li><strong>Semantic modeling:</strong> structured models for governance, maintainability, and shared business logic.</li>
+              <li><strong>Decision support:</strong> translated stakeholder needs into analytics that support real business decisions.</li>
+            </ul>
+          </div>
+          <div>
+            <p class="eyebrow">Gallup Strengths</p>
+            <div class="tag-list tag-list--gallup">
+              <span class="tag">Add Top 5</span>
+              <span class="tag">Gallup</span>
+              <span class="tag">Strengths</span>
+              <span class="tag">Here</span>
+              <span class="tag">Next</span>
+            </div>
+            <p class="delivery-focus-note">This space is ready for your exact Gallup strengths once you share the final names.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+</div>
 
 <section class="page-section page-section--featured">
   <div class="container container--narrow">
@@ -81,7 +98,7 @@ layout: default
   </div>
 </section>
 
-<section class="page-section page-section--compact">
+<section class="page-section page-section--compact section--cream">
   <div class="container split">
     <div>
       <p class="eyebrow">Technical Project</p>
@@ -129,7 +146,7 @@ layout: default
   </div>
 </section>
 
-<section class="page-section page-section--tight page-section--compact">
+<section class="page-section page-section--tight page-section--compact section--cream">
   <div class="container contact-strip">
     <div>
       <p class="eyebrow">Contact</p>

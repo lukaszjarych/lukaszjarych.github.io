@@ -3,7 +3,7 @@ layout: default
 ---
 
 <section class="hero">
-  <div class="container container--narrow hero__grid">
+  <div class="container hero__grid">
     <div class="hero-copy">
       <p class="eyebrow">Senior BI, Analytics, and Data Modeling Portfolio</p>
       <h1>Building trusted reporting, semantic models, and decision-ready analytics.</h1>
@@ -11,15 +11,6 @@ layout: default
       <div class="hero__actions">
         <a class="button" href="{{ '/case-studies/' | relative_url }}">View Case Studies</a>
         <a class="button button--secondary" href="{{ '/projects/' | relative_url }}">Explore Projects</a>
-      </div>
-      <div class="hero__highlights">
-        {% assign hero_case_studies = site.case_studies | sort: "order" %}
-        {% for case_study in hero_case_studies limit:4 %}
-          <a class="hero-highlight" href="{{ case_study.url | relative_url }}">
-            <span class="hero-highlight__label">{{ case_study.eyebrow }}</span>
-            <strong>{{ case_study.title }}</strong>
-          </a>
-        {% endfor %}
       </div>
     </div>
     <aside class="hero-side">
@@ -32,15 +23,20 @@ layout: default
           </figcaption>
         </figure>
       {% endif %}
-      <section class="hero-panel">
-        <p class="eyebrow">Delivery Focus</p>
-        <ul class="simple-list simple-list--tight">
-          <li>Semantic models designed for reuse, governance, and reliable KPI logic</li>
-          <li>Architecture and transformation choices explained clearly to stakeholders</li>
-          <li>Reporting shaped around decision-making, not only dashboard visuals</li>
-        </ul>
-      </section>
     </aside>
+  </div>
+</section>
+
+<section class="page-section delivery-focus-section">
+  <div class="container">
+    <section class="delivery-focus-card">
+      <p class="eyebrow">Delivery Focus</p>
+      <ul class="simple-list simple-list--tight">
+        <li>Reusable semantic models with governed KPI logic</li>
+        <li>Architecture and transformation choices explained clearly</li>
+        <li>Reporting designed around business decisions</li>
+      </ul>
+    </section>
   </div>
 </section>
 
@@ -85,7 +81,7 @@ layout: default
   </div>
 </section>
 
-<section class="page-section page-section--accent page-section--compact">
+<section class="page-section page-section--compact">
   <div class="container split">
     <div>
       <p class="eyebrow">Technical Project</p>
@@ -104,7 +100,7 @@ layout: default
   </div>
 </section>
 
-<section class="page-section page-section--compact">
+<section class="page-section page-section--compact section--soft">
   <div class="container split">
     <div>
       <p class="eyebrow">Strengths</p>

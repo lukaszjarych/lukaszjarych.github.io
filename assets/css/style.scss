@@ -128,14 +128,19 @@ img {
 }
 
 .hero {
-  padding-top: 3rem;
-  padding-bottom: 1.2rem;
+  padding: 40px 0 24px;
 }
 
 .hero__grid,
 .split {
   grid-template-columns: minmax(0, 0.92fr) minmax(280px, 0.84fr);
   align-items: start;
+}
+
+.hero__grid {
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 40px;
+  align-items: center;
 }
 
 .hero h1,
@@ -149,25 +154,28 @@ img {
 
 .hero h1,
 .page-hero h1 {
-  font-size: clamp(1.75rem, 2.3vw, 2.7rem);
-  max-width: 10ch;
+  font-size: clamp(1.9rem, 2.7vw, 3rem);
+  max-width: 13ch;
   text-wrap: balance;
 }
 
 .lead {
-  font-size: 0.92rem;
+  font-size: 0.96rem;
   color: var(--muted);
-  max-width: 52ch;
+  max-width: 42ch;
 }
 
 .hero-copy {
-  max-width: 560px;
-  padding-left: 2rem;
+  max-width: 680px;
+  padding-left: 1.8rem;
+  padding-top: 0;
 }
 
 .hero-side {
-  align-content: start;
-  gap: 1rem;
+  align-content: center;
+  gap: 0;
+  max-width: 520px;
+  justify-self: end;
 }
 
 .profile-card {
@@ -181,10 +189,11 @@ img {
 
 .profile-card__image {
   width: 100%;
-  min-height: 180px;
-  aspect-ratio: 11 / 9;
+  min-height: 0;
+  aspect-ratio: auto;
   object-fit: cover;
   object-position: center center;
+  height: 300px;
 }
 
 .profile-card__caption {
@@ -236,7 +245,6 @@ img {
   color: var(--accent);
 }
 
-.hero-panel,
 .panel,
 .card,
 .contact-card {
@@ -246,59 +254,16 @@ img {
   box-shadow: var(--shadow);
 }
 
-.hero-panel,
 .panel,
 .contact-card {
   padding: 1.5rem;
-}
-
-.hero-panel {
-  padding: 1.1rem 1.2rem;
-}
-
-.hero-panel p {
-  margin-top: 0;
 }
 
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  margin-top: 1.75rem;
-}
-
-.hero__highlights {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 0.8rem;
-  margin-top: 1.15rem;
-}
-
-.hero-highlight {
-  display: grid;
-  gap: 0.15rem;
-  padding: 0.8rem 0.95rem;
-  text-decoration: none;
-  color: var(--text);
-  background: rgba(255, 253, 248, 0.72);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-}
-
-.hero-highlight:hover {
-  border-color: rgba(40, 92, 99, 0.35);
-}
-
-.hero-highlight__label {
-  font-size: 0.7rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
-}
-
-.hero-highlight strong {
-  font-size: 0.94rem;
-  line-height: 1.3;
+  margin-top: 1.55rem;
 }
 
 .button {
@@ -438,24 +403,37 @@ img {
   font-size: 1rem;
 }
 
-.page-section--accent {
-  background: rgba(220, 233, 233, 0.5);
-  border-top: 1px solid rgba(40, 92, 99, 0.08);
-  border-bottom: 1px solid rgba(40, 92, 99, 0.08);
-}
-
 .page-section--tight {
   padding-top: 2rem;
 }
 
 .page-section--compact {
-  padding-top: 2.6rem;
-  padding-bottom: 2.6rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .page-section--featured {
-  padding-top: 0.5rem;
-  padding-bottom: 2.2rem;
+  background: #eef3f3;
+  padding: 48px 0;
+}
+
+.delivery-focus-section {
+  background: #f7f9f9;
+  padding: 32px 0;
+}
+
+.delivery-focus-card {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 24px 28px;
+  background: rgba(255, 253, 248, 0.85);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.section--soft {
+  background: #f7f9f9;
 }
 
 .page-hero--compact {
@@ -631,6 +609,8 @@ img {
 
   .hero-copy {
     padding-left: 0;
+    padding-top: 0;
+    max-width: none;
   }
 }
 

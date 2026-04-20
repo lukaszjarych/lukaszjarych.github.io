@@ -7,7 +7,7 @@ hero_style: compact
 
 <section class="cards cards--stacked">
   <article class="card card--with-media project-card">
-    <img class="card__image card__image--stacked" src="{{ '/assets/images/case-studies/azure-cost-analytics/04-star schema.png' | relative_url }}" alt="Star schema diagram from Azure cost analytics architecture">
+    <img class="card__image card__image--stacked" src="{{ '/assets/images/case-studies/azure-cost-analytics/04-star schema.png' | relative_url }}" alt="Azure cost analytics semantic model preview">
     <div class="card__body">
       <p class="eyebrow">Project</p>
       <h2>dbt Portfolio Project</h2>

@@ -1,8 +1,8 @@
 ---
 title: AI-Powered BI Delivery with Lightdash
 eyebrow: Featured Case Study
-excerpt: Azure cost analytics MVP delivered with dbt, DuckDB, MotherDuck, Lightdash, and AI-assisted implementation to turn modeled billing data into a usable business dashboard.
-summary: A portfolio case study showing how AI-assisted implementation, analytics engineering, and BI delivery were combined to build a focused Azure cost analytics MVP around pricing models, discount capture, PAYG versus effective cost, and savings plan opportunity analysis.
+excerpt: dbt and Lightdash MVP that turns Azure pricing and amortized-cost logic into curated marts, MotherDuck-hosted semantic tables, and decision-ready dashboard exploration.
+summary: A focused Azure cost analytics MVP built with dbt, DuckDB, MotherDuck, and Lightdash to expose pricing-model behavior, discount capture, PAYG baseline, and optimization opportunities through a curated semantic BI workflow.
 tools:
   - Lightdash
   - dbt
@@ -27,77 +27,106 @@ gallery:
 
 ## Overview
 
-This case study presents an end-to-end BI delivery workflow built around Azure cost analytics and implemented with a modern open analytics stack.
+This case study shows a tighter, modern BI delivery slice built on top of Azure cost-management logic. The goal was not to recreate the full Fabric-oriented cost platform, but to prove that a focused MVP could take dbt-modeled pricing and amortized-cost data, publish curated marts into MotherDuck, and expose them through Lightdash as a semantic exploration layer.
 
-The work covered more than dashboard creation. It included defining the MVP scope, exposing curated marts, validating business logic, synchronizing modeled outputs from local DuckDB to MotherDuck, and deploying a Lightdash dashboard designed for exploration rather than static screenshot reporting.
+That makes the project useful as public technical proof. It demonstrates how analytics engineering, semantic design, and dashboard delivery can be connected end to end with a lightweight stack that is easier to share publicly than a larger enterprise implementation.
 
 ## Business Problem
 
-Cost data is only useful when teams can move from raw billing records to clear business questions. In this case, the challenge was to deliver a reporting layer that could help users understand:
+Azure cost data becomes useful only when business users can move from billing lines to meaningful optimization questions. The reporting layer needed to help users understand:
 
-- pricing model mix across OnDemand, SavingsPlan, Reservation, and Spot
-- effective cost versus on-demand baseline
-- discount capture and pricing model behavior
-- discountable usage and savings plan opportunity patterns
-- drill-down diagnostics behind cost movements
+- pricing-model mix across OnDemand, SavingsPlan, Reservation, and Spot
+- effective cost versus PAYG baseline
+- discount captured and discount percentage behavior
+- discountability and opportunity segmentation
+- which slices of usage looked like candidates for better pricing treatment
 
-The real difficulty was not only building visuals. It was translating Azure billing logic into a semantic structure that decision-makers could actually use.
+The hard part was not dashboard cosmetics. It was designing a semantic layer that translated pricing and amortized-cost logic into metrics and dimensions that could be explored confidently.
 
-## Solution Approach
+## MVP Scope
 
-The solution was implemented as a focused MVP rather than a broad migration of legacy analytics logic. Only the most stable and decision-relevant slice of the cost model was carried forward into the BI layer.
+The project was intentionally narrow. Rather than migrate every branch of the larger cost-management logic, the MVP focused on the stable slice that best demonstrated engineering quality and decision value.
 
-The delivery workflow combined:
+That scope included:
 
-- dbt models were used to structure and document the business logic
-- DuckDB served as the local development engine for fast iteration
-- MotherDuck was used to publish the curated marts for shared access
-- Lightdash provided the exploration and dashboarding layer on top of the modeled data
+- public retail price sheet ingestion
+- EA customer price sheet normalization
+- unified price sheet modeling
+- amortized cost transformation
+- Lightdash-facing marts for pricing and discount analysis
 
-The reporting layer was intentionally built on curated marts rather than raw or intermediate tables. In practice, that meant exposing a thin Lightdash-facing semantic layer around:
+By keeping the scope tight, the project made room for stronger modeling discipline, clearer documentation, and a cleaner semantic BI experience.
 
-- a pricing reference mart
-- an amortized cost fact mart
-- a daily discount opportunity aggregation mart
+## Technical Workflow
 
-The delivered output was a working dashboard with executive KPIs, discount-focused analysis, usage diagnostics, and pricing reference views built on top of those curated entry points.
+The workflow combines several runtimes, each with a specific role:
 
-## Technical Delivery
+- dbt handles the transformation logic and quality checks
+- DuckDB is the fast local development engine
+- MotherDuck hosts the curated analytics marts for shared querying
+- Lightdash Cloud provides the semantic and dashboarding layer
 
-The strongest technical aspect of the project was the way modeling and BI delivery were connected into one workflow instead of being treated as separate tasks.
+The practical delivery flow is:
 
-The solution included:
+1. build local marts in DuckDB with dbt
+2. sync only the curated analytics tables into MotherDuck
+3. refresh the Lightdash preview against the published marts
+4. validate the dashboard against business logic and KPI expectations
 
-- shaping dbt models specifically for BI consumption rather than exposing lower-level warehouse layers directly
-- validating measures such as effective cost, PAYG baseline, discount captured, and effective discount percentage
-- publishing local model outputs into MotherDuck for shared analytical access
-- using Lightdash as the semantic and dashboarding layer over the curated marts
-- iterating on chart definitions, labels, filters, and dashboard structure until the reporting layer was both technically valid and business-readable
+This split runtime is one of the strongest technical decisions in the project. It balances local development speed with cloud accessibility, while making the trade-offs explicit in the documentation.
+
+## dbt And Semantic Layer Design
+
+The repo shows that the BI layer was built on curated marts rather than on raw or intermediate tables. That is important because it creates a semantic contract for the dashboard instead of exposing fragile transformation logic directly to BI users.
+
+The semantic layer was built on a small set of curated marts rather than on raw or intermediate models. That gave the BI layer stable entry points for KPIs and drill paths around:
+
+- effective cost
+- PAYG baseline
+- captured discount
+- pricing-model segmentation
+- discount opportunity categories
+
+The project also includes explicit data-quality protections, including uniqueness and not-null checks, arithmetic consistency tests, and business-rule tests around discount logic. That helps show that the semantic layer was engineered, not improvised.
+
+## Lightdash Delivery
+
+Lightdash is not just a screenshot destination in this project. It is the business-facing semantic and exploration surface built on top of the curated marts.
+
+The dashboard layer was shaped to support:
+
+- executive KPI review
+- discount-opportunity segmentation by pricing model
+- drill-down into amortized-cost diagnostics
+- exploration of pricing-reference and optimization logic
+
+This makes the project a good example of BI delivery built from an analytics-engineering foundation. The Lightdash layer stays thin and business-readable because the heavy logic already lives in dbt models and curated marts.
 
 ## AI-Assisted Delivery
 
-What makes this case study especially relevant is the delivery style. A significant part of the implementation was accelerated through AI-assisted development.
+AI-assisted implementation played a meaningful role in speeding up delivery, but the value is best understood as acceleration on top of clear engineering choices rather than replacement for them.
 
-That support was used to move faster across technical tasks such as:
+It helped move faster on tasks such as:
 
-- refining dashboard scope from business intent
-- exposing only the right marts to the BI layer
+- narrowing the MVP scope
+- shaping marts for BI consumption
 - validating model and metric behavior
-- synchronizing data outputs into the target analytical environment
-- iterating on dashboard structure, labels, filters, and user-facing logic
+- tightening dashboard structure, labels, and filters
+- documenting the local-to-cloud workflow
 
-This is the kind of work that shows how AI can improve analytics delivery in practice: not as a slideware concept, but as a way to speed up real engineering, model refinement, semantic shaping, and BI implementation.
+That is relevant because it shows how AI can improve analytics delivery in practice: by accelerating real model, semantic, and dashboard work within a defined architecture.
 
 ## Outcome
 
-The final result was a recruiter-friendly example of modern analytics delivery: business logic modeled in dbt, local and cloud analytics environments connected through DuckDB and MotherDuck, and a Lightdash dashboard delivered as a usable reporting product.
+The result is a recruiter-friendly example of a modern analytics delivery pattern: business logic modeled in dbt, curated marts built locally in DuckDB, selected tables synchronized to MotherDuck, and a Lightdash dashboard delivered on top of a controlled semantic layer.
 
-Beyond the dashboard itself, the project demonstrates the ability to:
+The case study demonstrates the ability to:
 
-- reduce a larger analytics domain into a stable MVP
-- model business logic for reporting rather than only for storage
-- deliver a semantic BI layer on top of curated marts
-- combine analytics engineering, BI implementation, and AI-assisted execution into one coherent workflow
+- reduce a broad cost domain into a stable and presentable MVP
+- model for BI consumption instead of only for storage
+- design a semantic layer around curated marts
+- explain and execute runtime trade-offs across local and cloud tools
+- deliver a usable analytics product instead of only a transformation repo
 
 ## Confidentiality Note
 

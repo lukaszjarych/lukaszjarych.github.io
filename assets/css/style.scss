@@ -322,10 +322,6 @@ img {
   gap: 1.25rem;
 }
 
-.cards--home .home-case-card--4 {
-  grid-column: 2;
-}
-
 .cards--stacked {
   grid-template-columns: 1fr;
 }
@@ -637,10 +633,6 @@ img {
   .case-study__content,
   .contact-grid {
     grid-template-columns: 1fr;
-  }
-
-  .cards--home .home-case-card--4 {
-    grid-column: auto;
   }
 
   .site-header__inner {

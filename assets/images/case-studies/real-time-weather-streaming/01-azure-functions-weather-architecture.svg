@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 864" role="img" aria-labelledby="title desc">
+  <title id="title">Real-time weather streaming architecture on Azure and Microsoft Fabric</title>
+  <desc id="desc">WeatherAPI data is ingested by an Azure Function, sent to Event Hubs, routed through Fabric Eventstream into Eventhouse and KQL materialized views, then consumed by Power BI.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f4ed"/>
+      <stop offset="0.58" stop-color="#eef3f3"/>
+      <stop offset="1" stop-color="#fffdf8"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#285c63"/>
+      <stop offset="1" stop-color="#3f7f78"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-30%" width="140%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#1d2a30" flood-opacity="0.16"/>
+    </filter>
+    <marker id="arrow" markerWidth="14" markerHeight="14" refX="10" refY="7" orient="auto" markerUnits="strokeWidth">
+      <path d="M2,2 L12,7 L2,12 Z" fill="#285c63"/>
+    </marker>
+    <style>
+      .title { font-family: Georgia, 'Times New Roman', serif; font-size: 50px; font-weight: 700; fill: #1d2a30; }
+      .subtitle { font-family: Georgia, 'Times New Roman', serif; font-size: 22px; fill: #58656b; }
+      .section { font-family: Arial, sans-serif; font-size: 15px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; fill: #285c63; }
+      .label { font-family: Arial, sans-serif; font-size: 25px; font-weight: 700; fill: #1d2a30; }
+      .small { font-family: Arial, sans-serif; font-size: 17px; fill: #58656b; }
+      .tiny { font-family: Arial, sans-serif; font-size: 14px; fill: #58656b; }
+      .pill { font-family: Arial, sans-serif; font-size: 16px; font-weight: 700; fill: #285c63; }
+      .card { fill: rgba(255,253,248,0.94); stroke: #d7d0c4; stroke-width: 2; }
+      .soft { fill: #dce9e9; }
+      .muted-line { stroke: #b8c7c5; stroke-width: 3; stroke-dasharray: 8 8; fill: none; }
+      .flow { stroke: #285c63; stroke-width: 5; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1536" height="864" fill="url(#bg)"/>
+  <path d="M0 700 C250 620 410 820 690 732 C970 644 1145 650 1536 742 L1536 864 L0 864 Z" fill="#e4eeee" opacity="0.75"/>
+
+  <text class="title" x="78" y="98">Real-Time Weather Streaming</text>
+  <text class="subtitle" x="82" y="136">Cost-conscious Azure Functions ingestion with Fabric Eventhouse, KQL, Power BI, and Data Activator alerts</text>
+
+  <g transform="translate(78 205)">
+    <text class="section" x="0" y="-28">Production runtime</text>
+    <g filter="url(#shadow)">
+      <rect class="card" x="0" y="0" width="210" height="250" rx="18"/>
+      <circle cx="105" cy="78" r="43" fill="#dce9e9"/>
+      <path d="M72 83 C87 50 124 51 139 83 C125 75 91 75 72 83 Z" fill="#285c63"/>
+      <path d="M62 107 C95 87 119 87 151 107" stroke="#285c63" stroke-width="10" stroke-linecap="round" fill="none"/>
+      <text class="label" x="105" y="159" text-anchor="middle">WeatherAPI</text>
+      <text class="small" x="105" y="189" text-anchor="middle">Current weather</text>
+      <text class="small" x="105" y="214" text-anchor="middle">3-day forecast</text>
+    </g>
+    <path class="flow" d="M222 125 H320"/>
+    <g filter="url(#shadow)" transform="translate(342 0)">
+      <rect class="card" x="0" y="0" width="250" height="250" rx="18"/>
+      <rect x="50" y="45" width="150" height="112" rx="16" fill="url(#accent)"/>
+      <path d="M94 142 L123 84 H102 L132 42 L116 100 H140 Z" fill="#ffd43b"/>
+      <text class="label" x="125" y="189" text-anchor="middle">Azure Function</text>
+      <text class="small" x="125" y="216" text-anchor="middle">PowerShell timer</text>
+      <text class="tiny" x="125" y="238" text-anchor="middle">Every 30 seconds</text>
+    </g>
+    <path class="flow" d="M604 125 H702"/>
+    <g filter="url(#shadow)" transform="translate(724 0)">
+      <rect class="card" x="0" y="0" width="230" height="250" rx="18"/>
+      <rect x="55" y="57" width="120" height="82" rx="12" fill="#dce9e9" stroke="#285c63" stroke-width="4"/>
+      <rect x="76" y="78" width="22" height="22" rx="4" fill="#285c63"/>
+      <rect x="108" y="78" width="22" height="22" rx="4" fill="#3f7f78"/>
+      <rect x="140" y="78" width="22" height="22" rx="4" fill="#8ea64c"/>
+      <rect x="76" y="111" width="22" height="22" rx="4" fill="#8ea64c"/>
+      <rect x="108" y="111" width="22" height="22" rx="4" fill="#285c63"/>
+      <text class="label" x="115" y="189" text-anchor="middle">Event Hubs</text>
+      <text class="small" x="115" y="216" text-anchor="middle">Streaming buffer</text>
+    </g>
+    <path class="flow" d="M966 125 H1064"/>
+    <g filter="url(#shadow)" transform="translate(1086 0)">
+      <rect class="card" x="0" y="0" width="300" height="250" rx="18"/>
+      <path d="M74 66 C111 37 151 37 188 66 L150 95 C128 80 111 80 88 95 Z" fill="#285c63"/>
+      <path d="M86 118 C114 95 149 95 177 118" stroke="#3f7f78" stroke-width="18" stroke-linecap="round" fill="none"/>
+      <text class="label" x="150" y="177" text-anchor="middle">Fabric Eventstream</text>
+      <text class="small" x="150" y="206" text-anchor="middle">Routes Event Hub data</text>
+      <text class="tiny" x="150" y="230" text-anchor="middle">to Eventhouse target</text>
+    </g>
+  </g>
+
+  <g transform="translate(448 535)">
+    <text class="section" x="0" y="-28">Analytics and reporting</text>
+    <g filter="url(#shadow)">
+      <rect class="card" x="0" y="0" width="300" height="210" rx="18"/>
+      <rect x="42" y="48" width="86" height="86" rx="14" fill="#dce9e9" stroke="#285c63" stroke-width="4"/>
+      <path d="M73 76 L95 76 L95 110 L118 110 L84 139 L50 110 L73 110 Z" fill="#285c63"/>
+      <text class="label" x="205" y="78" text-anchor="middle">Eventhouse</text>
+      <text class="small" x="205" y="110" text-anchor="middle">KQL table</text>
+      <text class="small" x="205" y="137" text-anchor="middle">Materialized views</text>
+      <text class="tiny" x="205" y="164" text-anchor="middle">Latest, history, forecast</text>
+    </g>
+    <path class="flow" d="M312 105 H430"/>
+    <g filter="url(#shadow)" transform="translate(452 0)">
+      <rect class="card" x="0" y="0" width="300" height="210" rx="18"/>
+      <rect x="55" y="63" width="34" height="80" rx="7" fill="#f3c746"/>
+      <rect x="96" y="37" width="34" height="106" rx="7" fill="#e2a929"/>
+      <rect x="137" y="83" width="34" height="60" rx="7" fill="#c58c21"/>
+      <text class="label" x="232" y="78" text-anchor="middle">Power BI</text>
+      <text class="small" x="232" y="110" text-anchor="middle">Near-real-time</text>
+      <text class="small" x="232" y="137" text-anchor="middle">weather report</text>
+    </g>
+  </g>
+
+  <g transform="translate(78 535)">
+    <text class="section" x="0" y="-28">Decision evidence</text>
+    <rect class="card" x="0" y="0" width="300" height="210" rx="18"/>
+    <text class="label" x="28" y="52">Why Functions?</text>
+    <text class="small" x="28" y="88">One API call plus one</text>
+    <text class="small" x="28" y="114">Event Hub message</text>
+    <text class="small" x="28" y="150">Consumption plan fits</text>
+    <text class="small" x="28" y="176">the scheduled workload</text>
+  </g>
+
+  <g transform="translate(1214 535)">
+    <text class="section" x="0" y="-28">Alert automation</text>
+    <rect class="card" x="0" y="0" width="244" height="210" rx="18"/>
+    <rect x="28" y="50" width="70" height="52" rx="9" fill="#dce9e9" stroke="#285c63" stroke-width="4"/>
+    <path d="M30 56 L63 83 L96 56" stroke="#285c63" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="92" cy="116" r="22" fill="#f3c746"/>
+    <path d="M92 103 V116 L104 124" stroke="#1d2a30" stroke-width="5" stroke-linecap="round" fill="none"/>
+    <text class="small" x="168" y="66" text-anchor="middle" font-weight="700">Data Activator</text>
+    <text class="small" x="168" y="103" text-anchor="middle">Email warning</text>
+    <text class="small" x="168" y="130" text-anchor="middle">notification</text>
+    <path class="muted-line" d="M10 166 H234"/>
+    <text class="tiny" x="122" y="191" text-anchor="middle">Databricks kept as prototype path</text>
+  </g>
+
+</svg>

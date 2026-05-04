@@ -40,4 +40,21 @@ hero_style: compact
       </div>
     </div>
   </article>
+  <article class="card card--with-media project-card">
+    <img class="card__image card__image--stacked" src="{{ '/assets/images/case-studies/real-time-weather-streaming/01-azure-functions-weather-architecture.png' | relative_url }}" alt="Azure Functions weather streaming architecture">
+    <div class="card__body">
+      <p class="eyebrow">Project</p>
+      <h2>Real-Time Weather Streaming</h2>
+      <p>GitHub proof for a cost-conscious Azure and Fabric streaming pipeline: Azure Functions ingestion, Event Hubs routing, Eventhouse/KQL shaping, Power BI reporting, and Data Activator email alerts.</p>
+      <ul class="simple-list">
+        <li>Shows why Azure Functions was selected over Databricks for lightweight scheduled ingestion</li>
+        <li>Includes KQL materialized views that flatten nested JSON into report-ready tables</li>
+        <li>Supported by a PBIP/PBIR Power BI report, alerting flow, and draft case-study notes</li>
+      </ul>
+      <div class="about-actions">
+        <a class="button" href="https://github.com/lukaszjarych/databricks-events" target="_blank" rel="noreferrer">Weather Streaming GitHub Repository</a>
+        <a class="button button--secondary" href="{{ '/case-studies/real-time-weather-streaming/' | relative_url }}">Case Study</a>
+      </div>
+    </div>
+  </article>
 </section>

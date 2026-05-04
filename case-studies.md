@@ -7,9 +7,9 @@ hero_style: compact
 
 These summaries focus on architecture, modeling, delivery choices, and business outcomes.
 
-<section class="cards cards--home">
+<section class="cards cards--home cards--case-index">
   {% assign featured_case_studies = site.case_studies | where: "featured", true | sort: "order" %}
-  {% assign hero_case_study_titles = "Azure Cost Analytics in Microsoft Fabric / Power BI|AI-Powered BI Delivery with Lightdash|Cloud Migration Metadata Workflow|QlikView Sales Classification Pipeline" | split: "|" %}
+  {% assign hero_case_study_titles = "Azure Cost Analytics in Microsoft Fabric / Power BI|AI-Powered BI Delivery with Lightdash|Cloud Migration Metadata Workflow|QlikView Sales Classification Pipeline|Real-Time Weather Streaming on Azure and Microsoft Fabric" | split: "|" %}
   {% for desired_title in hero_case_study_titles %}
     {% assign case_study = featured_case_studies | where: "title", desired_title | first %}
     {% if case_study %}
@@ -30,7 +30,7 @@ These summaries focus on architecture, modeling, delivery choices, and business 
         <h2><a href="{{ case_study.url | relative_url }}">{{ case_study.title }}</a></h2>
         <p>{{ case_study.excerpt }}</p>
         <div class="tag-list">
-          {% for tool in case_study.tools limit:5 %}
+          {% for tool in case_study.tools limit:6 %}
             <span class="tag">{{ tool }}</span>
           {% endfor %}
         </div>
